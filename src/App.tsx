@@ -1,3 +1,4 @@
+import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
 
 const TechFetch =async ()=>{
@@ -13,6 +14,9 @@ const App = () => {
   return (
     <div className="bg-white">
       <Navbar/>
+      <Hero/>
+     
+
     </div>
   )
 }
