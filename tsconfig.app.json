@@ -22,5 +22,5 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "src/Technology/Hero.tsx", "../B14-A05-DevStack/types"]
+  "include": ["src", "src/Technology/Hero.tsx", "src/types"]
 }
