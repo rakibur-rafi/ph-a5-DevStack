@@ -2,7 +2,7 @@ import type { TechnologyType } from '../../types/TechType'
 
 const TechCard = ({tech}: { tech: TechnologyType }) => {
   return (
-    <div>
+    <div className="">
         <div className="card bg-base-100 shadow-sm inter">
             <div className="card-body">
                 <div className="flex justify-between">
@@ -39,10 +39,10 @@ const TechCard = ({tech}: { tech: TechnologyType }) => {
                 <div className="mt-4 flex justify-between text-xs items-center">
                     <span className="badge text-xs bg-[#F1F5F9] text-[#475569]">{tech.category}</span>
                     <span className="text-[#64748B]">{tech.difficulty}</span>
-                    <span className="text-[#334155] font-semibold"> {tech.rating}</span>
+                    <span className="text-[#334155] font-semibold max-lg:text-[#F59E0B]"> {tech.rating}</span>
                 </div>
                 <div className="mt-2">
-                <button className="btn btn-neutral rounded-xl w-full">Add to Stack</button>
+                <button className="btn text-white dark-color-bg rounded-xl w-full font-normal">Add to Stack</button>
                 </div>
             </div>
         </div>

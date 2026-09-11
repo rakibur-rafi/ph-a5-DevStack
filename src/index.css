@@ -24,6 +24,9 @@
 .dark-color{
   color: #0F172A;
 }
+.dark-color-bg{
+  background-color: #0F172A;
+}
 
 .inter{
   font-family: "Inter", sans-serif;
