@@ -16,7 +16,7 @@ const TechnologiesList = ({technologies} : { technologies: TechnologyType[] } ) 
             }
         </div>
         <div className="">
-            <TechStack/>
+            <TechStack stack={stack} setStack={setStack}/>
         </div>
     </div>
   )

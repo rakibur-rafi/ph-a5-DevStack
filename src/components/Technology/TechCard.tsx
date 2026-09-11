@@ -1,6 +1,5 @@
 import type { Dispatch, SetStateAction } from 'react';
 import type { TechnologyType } from '../../types/TechType'
-import { SiTarom } from 'react-icons/si';
 import { FaStar } from 'react-icons/fa';
 
 interface TechCardProps {
@@ -20,7 +19,7 @@ const TechCard = ({tech, stack, setStack}: TechCardProps) => {
   }
   return (
     <div className="">
-        <div className={`card bg-base-100 shadow-sm inter ${stack.includes(tech) ? "border-2 border-[#64748B]" : ""}`}>
+        <div className={`card bg-base-100 shadow-sm inter ${stack.includes(tech) ? "border-2 border-[#657992]" : ""}`}>
             <div className="card-body">
                 <div className="flex justify-between">
                   <div className="flex flex-col max-lg:flex-row gap-4">
@@ -28,7 +27,7 @@ const TechCard = ({tech, stack, setStack}: TechCardProps) => {
                     <h2 className="card-title font-bold">{tech.name}</h2>
                   </div>
                       <span
-                        className={`badge rounded-full text-xs ${
+                        className={`badge rounded-full text-xs font-semibold ${
                           tech.badge === "Popular"
                             ? "bg-[#F0F9FF] text-[#0EA5E9] border-[#E0F2FE]"
                             : tech.badge === "Fast"
@@ -65,8 +64,8 @@ const TechCard = ({tech, stack, setStack}: TechCardProps) => {
                     </div>
                 </div>
                 <div className="mt-2">
-                <button onClick={handleClick} disabled={stack.includes(tech)} className={`btn rounded-xl w-full font-normal ${stack.includes(tech) ? "btn-disabled text-[#334155] font-semibold" : "text-white dark-color-bg "}`}>
-                  {stack.includes(tech) ? "Added to Stack" : "Add to Stack"}
+                <button onClick={handleClick} disabled={stack.includes(tech)} className={`btn rounded-xl w-full font-normal ${stack.includes(tech) ? "btn-disabled  text-[#334155] font-semibold" : "text-white dark-color-bg "}`}>
+                  {stack.includes(tech) ? "✓ Added to Stack" : "Add to Stack"}
                 </button>
                 </div>
             </div>
