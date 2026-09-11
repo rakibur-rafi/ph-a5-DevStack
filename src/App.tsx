@@ -2,6 +2,7 @@ import { Suspense } from "react"
 import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
 import Technologies from "./components/Technology/Technologies"
+import { ToastContainer } from "react-toastify"
 
 const TechFetch =async ()=>{
   const res= await fetch("/data.json")
@@ -15,6 +16,15 @@ const App = () => {
 
   return (
     <div className="bg-white">
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar
+        closeOnClick
+        pauseOnHover
+        draggable
+        theme="dark"
+      />
       <Navbar/>
       <Hero/>
        <Suspense fallback={

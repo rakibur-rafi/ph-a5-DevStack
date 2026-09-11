@@ -1,6 +1,7 @@
 import type { Dispatch, SetStateAction } from 'react';
 import type { TechnologyType } from '../../types/TechType'
 import { FaStar } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 
 interface TechCardProps {
   tech: TechnologyType;
@@ -15,10 +16,12 @@ const TechCard = ({tech, stack, setStack}: TechCardProps) => {
       setStack(stack.filter((t) => t !== tech));
     } else {
       setStack([...stack, tech]);
+      toast.success(`${tech.name} added to stack.`);
     }
   }
   return (
     <div className="">
+      
         <div className={`card bg-base-100 shadow-sm inter ${stack.includes(tech) ? "border-2 border-[#657992]" : ""}`}>
             <div className="card-body">
                 <div className="flex justify-between">

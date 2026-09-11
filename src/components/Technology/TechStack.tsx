@@ -1,7 +1,7 @@
 import type { Dispatch, SetStateAction } from 'react'
 import type { TechnologyType } from '../../types/TechType'
 import { MdClose } from 'react-icons/md'
-
+import { toast, ToastContainer } from 'react-toastify'
 interface TechStackProps {
   stack: TechnologyType[]
   setStack: Dispatch<SetStateAction<TechnologyType[]>>
@@ -10,10 +10,19 @@ interface TechStackProps {
 const TechStack = ({ stack, setStack }: TechStackProps) => {
   const handleRemove = (id: string) => {
     setStack(stack.filter((tech) => tech.id !== id))
+    const tech = stack.find((tech) => tech.id === id)
+    toast.success(`${tech?.name} removed from stack.`)
+  }
+
+  const handleRemoveAll=()=>{
+    setStack([])
+    toast.success("All technologies removed.")
   }
 
   return (
     <div>
+   
+
       <div className="card bg-base-100 shadow-sm inter">
         <div className="card-body">
           <div className="flex flex-col gap-2">
@@ -55,7 +64,8 @@ const TechStack = ({ stack, setStack }: TechStackProps) => {
           {
             stack.length > 0 && (
               <div className="mt-10">
-                <button onClick={() => setStack([])} className="btn text-[#D82C20] border border-[#ED8C85] w-full rounded-xl">Remove All</button>
+                <button onClick={handleRemoveAll} className="btn text-[#D82C20] border border-[#ED8C85] w-full rounded-xl">Remove All</button>
+                
               </div>
             )
           }
