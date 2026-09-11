@@ -33,7 +33,7 @@
     "id": "express",
     "name": "Express.js",
     "category": "Backend",
-    "description": "A lightweight Node.js framework for building web servers and RESTful APIs.",
+    "description": "A lightweight and fast Node.js framework for building web servers and RESTful APIs.",
     "icon": "https://icon.icepanel.io/Technology/svg/Express.svg",
     "rating": 4.7,
     "difficulty": "Beginner-Friendly",
@@ -57,7 +57,7 @@
     "icon": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg",
     "rating": 4.9,
     "difficulty": "Intermediate",
-    "badge": "Top SQL"
+    "badge": "Popular"
   },
   {
     "id": "javascript",

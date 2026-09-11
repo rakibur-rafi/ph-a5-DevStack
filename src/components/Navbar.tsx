@@ -13,7 +13,7 @@ const Navbar = () => {
             <a href="#" className="">About</a>
             <a href="#" className="">Contact</a>
           </div>
-          <div className="flex items-center gap-7 max-lg:gap-3">
+          <div className="flex items-center gap-7 max-lg:gap-3 max-lg:text-xs">
             <button className="">Sign In</button>
             <button className="bg-[#D91B7E] text-white py-3 max-lg:py-1.5 px-6 max-lg:px-4 rounded-full">Sign Up</button>
           </div>

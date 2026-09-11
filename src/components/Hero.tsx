@@ -10,13 +10,13 @@ const Hero = () => {
                 compare them side by side, and put together the stack that fits your
                 next project.</p>
             <div className="flex gap-4 max-lg:gap-2 max-lg:justify-center text-sm max-lg:text-xs">
-                <button className="gradient-bg text-white py-3 px-6 rounded-2xl">Explore Technologies</button>
-                <button className="border border-[#4B5563] text-[#4B5563] py-3 px-12 rounded-2xl">Learn More</button>
+                <button className="gradient-bg text-white py-3 px-6 rounded-xl">Explore Technologies</button>
+                <button className="border border-[#E5E7EB] text-[#374151] py-3 px-12 rounded-xl">Learn More</button>
             </div>
         </div>
         <div className="flex justify-center lg:justify-end">
             <img src="/banner-stack.png" alt="Banner"
-            className="w-full max-w-lg lg:max-w-xl object-center"
+            className="w-full max-w-xl object-center max-lg:object-contain"
             />
       </div>
     </div>
