@@ -1,9 +1,26 @@
+import type { Dispatch, SetStateAction } from 'react';
 import type { TechnologyType } from '../../types/TechType'
+import { SiTarom } from 'react-icons/si';
+import { FaStar } from 'react-icons/fa';
 
-const TechCard = ({tech}: { tech: TechnologyType }) => {
+interface TechCardProps {
+  tech: TechnologyType;
+  stack: TechnologyType[];
+  setStack: Dispatch<SetStateAction<TechnologyType[]>>;
+}
+
+const TechCard = ({tech, stack, setStack}: TechCardProps) => {
+
+  const handleClick = () => {
+    if (stack.includes(tech)) {
+      setStack(stack.filter((t) => t !== tech));
+    } else {
+      setStack([...stack, tech]);
+    }
+  }
   return (
     <div className="">
-        <div className="card bg-base-100 shadow-sm inter">
+        <div className={`card bg-base-100 shadow-sm inter ${stack.includes(tech) ? "border-2 border-[#64748B]" : ""}`}>
             <div className="card-body">
                 <div className="flex justify-between">
                   <div className="flex flex-col max-lg:flex-row gap-4">
@@ -34,15 +51,23 @@ const TechCard = ({tech}: { tech: TechnologyType }) => {
                         {tech.badge}
                       </span>
                 </div>
+
+                
                 
                 <p className="text-[#64748B] max-lg:text-sm mt-4 mb-2">{tech.description}</p>
                 <div className="mt-4 flex justify-between text-xs items-center">
                     <span className="badge text-xs bg-[#F1F5F9] text-[#475569]">{tech.category}</span>
                     <span className="text-[#64748B]">{tech.difficulty}</span>
-                    <span className="text-[#334155] font-semibold max-lg:text-[#F59E0B]"> {tech.rating}</span>
+                    <div className="flex items-center gap-1">
+                      <FaStar className="text-[#F59E0B] text-sm max-lg:text-xs"/> 
+                      <span className="text-[#334155] font-semibold max-lg:text-[#F59E0B]">{tech.rating}</span>
+                      
+                    </div>
                 </div>
                 <div className="mt-2">
-                <button className="btn text-white dark-color-bg rounded-xl w-full font-normal">Add to Stack</button>
+                <button onClick={handleClick} disabled={stack.includes(tech)} className={`btn rounded-xl w-full font-normal ${stack.includes(tech) ? "btn-disabled text-[#334155] font-semibold" : "text-white dark-color-bg "}`}>
+                  {stack.includes(tech) ? "Added to Stack" : "Add to Stack"}
+                </button>
                 </div>
             </div>
         </div>
