@@ -3,6 +3,7 @@ import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
 import Technologies from "./components/Technology/Technologies"
 import { ToastContainer } from "react-toastify"
+import Footer from "./components/Footer"
 
 const TechFetch =async ()=>{
   const res= await fetch("/data.json")
@@ -15,7 +16,7 @@ const App = () => {
   const TechPromise= TechFetch()
 
   return (
-    <div className="bg-white">
+    <div className="bg-white max-lg:bg-[#FBFBFC]">
       <ToastContainer
         position="top-right"
         autoClose={3000}
@@ -34,6 +35,7 @@ const App = () => {
       }>
         <Technologies TechPromise={TechPromise}/>
       </Suspense>
+      <Footer/>
     </div>
   )
 }

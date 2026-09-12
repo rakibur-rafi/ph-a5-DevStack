@@ -25,7 +25,7 @@ const TechCard = ({tech, stack, setStack}: TechCardProps) => {
         <div className={`card bg-base-100 shadow-sm inter ${stack.includes(tech) ? "border-2 border-[#657992]" : ""}`}>
             <div className="card-body">
                 <div className="flex justify-between">
-                  <div className="flex flex-col max-lg:flex-row gap-4">
+                  <div className="flex flex-col max-lg:flex-row gap-3">
                     <img src={tech.icon} alt={tech.name} className="w-10 h-10"/>
                     <h2 className="card-title font-bold">{tech.name}</h2>
                   </div>
@@ -56,8 +56,8 @@ const TechCard = ({tech, stack, setStack}: TechCardProps) => {
 
                 
                 
-                <p className="text-[#64748B] max-lg:text-sm mt-4 mb-2">{tech.description}</p>
-                <div className="mt-4 flex justify-between text-xs items-center">
+                <p className="text-[#64748B] max-lg:text-sm my-2">{tech.description}</p>
+                <div className="mt- flex justify-between text-xs items-center border-t border-[#F9FAFB] pt-5">
                     <span className="badge text-xs bg-[#F1F5F9] text-[#475569]">{tech.category}</span>
                     <span className="text-[#64748B]">{tech.difficulty}</span>
                     <div className="flex items-center gap-1">
