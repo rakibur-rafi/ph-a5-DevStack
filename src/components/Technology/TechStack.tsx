@@ -64,8 +64,7 @@ const TechStack = ({ stack, setStack }: TechStackProps) => {
           {
             stack.length > 0 && (
               <div className="mt-10">
-                <button onClick={handleRemoveAll} className="btn text-[#D82C20] border border-[#ED8C85] w-full rounded-xl">Remove All</button>
-                
+                <button onClick={handleRemoveAll} className="btn bg-white text-[#D82C20] border border-[#ED8C85] w-full rounded-xl">Remove All</button>
               </div>
             )
           }

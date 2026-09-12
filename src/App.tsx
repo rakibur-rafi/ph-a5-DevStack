@@ -16,7 +16,7 @@ const App = () => {
   const TechPromise= TechFetch()
 
   return (
-    <div className="bg-white max-lg:bg-[#FBFBFC]">
+    <div className="bg-white max-sm:bg-[#FBFBFC]">
       <ToastContainer
         position="top-right"
         autoClose={3000}
@@ -29,7 +29,7 @@ const App = () => {
       <Navbar/>
       <Hero/>
        <Suspense fallback={
-        <div className="flex justify-center items-center min-h-40">
+        <div className="flex justify-center items-center min-h-80">
           <span className="loading loading-spinner loading-lg text-[#D91B7E] scale-200"></span>
         </div>
       }>

@@ -67,7 +67,7 @@ const TechCard = ({tech, stack, setStack}: TechCardProps) => {
                     </div>
                 </div>
                 <div className="mt-2">
-                <button onClick={handleClick} disabled={stack.includes(tech)} className={`btn rounded-xl w-full font-normal ${stack.includes(tech) ? "btn-disabled  text-[#334155] font-semibold" : "text-white dark-color-bg "}`}>
+                <button onClick={handleClick} disabled={stack.includes(tech)} className={`px-6 py-2.5 rounded-xl w-full font-normal ${stack.includes(tech) ? "bg-[#e8e8e8] cursor-not-allowed text-[#334155] font-semibold" : "text-white dark-color-bg "} disabled:cursor-not-allowed`}>
                   {stack.includes(tech) ? "✓ Added to Stack" : "Add to Stack"}
                 </button>
                 </div>
