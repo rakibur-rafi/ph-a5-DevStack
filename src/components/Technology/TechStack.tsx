@@ -1,7 +1,7 @@
 import type { Dispatch, SetStateAction } from 'react'
 import type { TechnologyType } from '../../types/TechType'
 import { MdClose } from 'react-icons/md'
-import { toast, ToastContainer } from 'react-toastify'
+import { toast } from 'react-toastify'
 interface TechStackProps {
   stack: TechnologyType[]
   setStack: Dispatch<SetStateAction<TechnologyType[]>>
