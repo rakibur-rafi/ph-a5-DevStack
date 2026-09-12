@@ -18,6 +18,9 @@ DevStack is a simple web app where developers can explore different technologies
 * Add technologies to your own stack.
 * Remove technologies individually or remove the whole stack at once.
 
+## Preview
+<img src="./devstack.png" alt="DevStack" width="900" />
+
 
 ## Questions & Answers
 
